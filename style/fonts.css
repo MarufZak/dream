@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'M-B';
+    src: url('../fonts/Metropolis/Metropolis-ExtraBold.otf');
+    font-size: 800;
+}
+@font-face {
+    font-family: 'M-R';
+    src: url('../fonts/Metropolis/Metropolis-Regular.otf');
+    font-size: 400;
+}
+@font-face {
+    font-family: 'M-L';
+    src: url('../fonts/Metropolis/Metropolis-Light.otf');
+    font-size: 400;
+}

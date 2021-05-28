@@ -1,0 +1,335 @@
+@import "./fonts.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "M-R";
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 15px;
+}
+
+:root {
+    --blue: #003458;
+    --blueLight: #82CDE5;
+    --white: #FFFFFF;
+    --brown: #333333;
+    --brown4: #4F4F4F;
+    --brown8: #828282;
+    --brownB: #BDBDBD;
+    --brownE: #E0E0E0;
+    --brownF: #F2F2F2;
+    --header-bg: #F2F9FB;
+}
+
+
+/* 
+============================================ HEADER NAVIGATION  ============================================
+============================================ HEADER NAVIGATION  ============================================
+============================================ HEADER NAVIGATION  ============================================ */
+
+
+
+
+
+.header-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    top: clamp(10px, 4.5vw, 80px);
+    z-index: 999;
+}
+
+.header__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+}
+
+.header__link {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 18px; /* 18px */
+    line-height: 18px; /* 18px */
+    color: var(--brown);
+}
+
+.header__register {
+    font-size: 18px;
+    line-height: 18px;
+    color: var(--blue);
+    padding: 18px 40px;
+    background: transparent;
+    display: inline-block;
+}
+
+.header__login {
+    font-size: 18px;
+    line-height: 18px;
+    color: var(--white);
+    padding: 18px 40px;
+    background: var(--blue);
+    display: inline-block;
+}
+
+
+.header__burger {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: none;
+    background: var(--blue);
+    border-radius: 10px;
+}
+
+.header__burger::before,
+.header__burger::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 3px;
+    background: var(--white);
+    position: absolute;
+}
+
+.header__burger span {
+    display: block;
+    width: 80%;
+    height: 3px;
+    background: var(--white);
+    position: absolute;
+}
+
+.header__burger::before {
+    top: 10px;
+}
+
+.header__burger::after {
+    bottom: 10px;
+}
+
+.header__burger span {
+    top: 24px;
+}
+
+
+/*  
+============================================ HEADER NAVIGATION  ============================================
+============================================ HEADER NAVIGATION  ============================================
+============================================ HEADER NAVIGATION  ============================================ */
+
+
+
+
+
+
+
+
+
+/*  
+============================================ HEADER CONTENT  ============================================
+============================================ HEADER CONTENT  ============================================
+============================================ HEADER CONTENT  ============================================ */
+
+
+
+.header-body {
+    width: 100%;
+    height: 100vh;
+    display: flex;    
+    min-width: 0;
+    background: var(--header-bg);
+}
+
+.header-content {
+    flex: 1 0 100%;
+    height: 100%;
+    /* background: var(--header-bg); */
+}
+
+.header-content__body {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header__title {
+    font-size: clamp(32px, 4.45vw, 72px);
+    line-height: clamp(42px, 5.56vw, 90px);
+    font-family: "M-E";
+    letter-spacing: 1%;
+    margin-bottom: clamp(20px, 2.78vw, 60px);
+}
+
+.header-swiper {
+    transform: translate(-100%,0);
+    /* flex: 0 0 calc(((100vw - общий padding) * процентная ширина) + половина обшего padding); */
+    flex: 0 0 calc(((100vw - 30px) * 0.5 ) + 15px );
+    overflow: hidden;
+    position: relative;
+}
+
+
+.header-slider__wrapper ,
+.header-slider__slide, 
+.header-img {
+    width: 100%;
+    height: 100%;
+}
+
+.header-img {
+    position: relative;
+}
+
+.header-slider__wrapper {
+    display: flex;
+}
+.header-slider__slide {
+    flex: 1 0 100%;
+}
+
+.header-img img {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-swiper__nav {
+    position: absolute;
+    bottom: 65px;
+    right: 100px;
+    display: flex;
+}
+
+.header-swiper__button--prev i {
+    color: var(--white);
+}
+
+.header-swiper__button--next,
+.header-swiper__button--prev {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.38);
+    backdrop-filter: blur(50px);
+}
+
+.header-swiper__button--next:hover,
+.header-swiper__button--prev:hover {
+    background: var(--blueLight);   
+}
+
+.header-swiper__button--next i {
+    color: var(--header-bg);
+}
+
+
+.header__choose {
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    padding: clamp(5px, 1.25vw, 24px);
+    background: var(--white);
+    width: 130%;
+}
+
+.header__choose-address,
+.header__choose-type {
+    width: clamp(150px, 21vw, 400px);
+    height: clamp(32px, 5vw, 84px);
+    background: var(--header-bg);
+    display: flex;
+    align-items: center;
+    padding: 0 clamp(10px, 1.7vw, 35px);
+}
+
+.header__choose-address span,
+.header__choose-type span {
+    font-size: clamp(12px, 1.25vw, 24px);
+    line-height: clamp(12px, 1.25vw, 24px);
+    color: var(--brown);
+}
+
+.header__choose-address i,
+.header__choose-type i {
+    font-size: clamp(14px, 1.67vw, 32px);
+    display: inline-block;
+    margin-right: clamp(12px, 1.5vw, 25px);
+    color: var(--brownB);
+}
+
+.header__choose-search {
+    width: clamp(32px, 5vw, 84px);
+    height: clamp(32px, 5vw, 84px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue);
+    color: var(--white);
+}
+
+.header__address {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: clamp(10px, 3.5vw, 70px);
+}
+
+.header__address-title {
+    font-size: clamp(24px, 2.23vw, 42px);
+    font-family: "M-E";
+    color: var(--brown);
+    line-height: 32px;
+    margin-bottom: clamp(5px, 1.5vw, 30px);
+}
+
+.header__address-subtitle {
+    color: var(--brownB);
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.header__address-subtitle i {
+    font-size: clamp(14px, 1.67vw, 32px);
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/*  
+============================================ HEADER CONTENT  ============================================
+============================================ HEADER CONTENT  ============================================
+============================================ HEADER CONTENT  ============================================ */
