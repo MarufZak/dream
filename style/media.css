@@ -124,6 +124,31 @@
         z-index: 999;
     }
 
+    .week__body {
+        grid-template: auto auto auto / 1fr;
+        place-items: center;
+        text-align: center;
+    }
+
+    .week__image {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .week__content {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .week__desc {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .week__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 @media (max-width: 525px) {
     .header__choose {
