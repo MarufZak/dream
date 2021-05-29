@@ -12,13 +12,31 @@ const headerSwiper = new Swiper(".header-swiper",{
         prevEl: '.header-swiper__button--next'
       },
       speed: 800,
-      effect: 'fade'
-
+      effect: 'fade',
+      autoplay: {
+        delay: 2000
+      },
+      breakpoints: {
+          992: {
+            autoplay: false
+          }
+      }
     
 })
 
 const nav = document.querySelector('.header__nav');
 const burger = document.querySelector('.header__burger');
+const header = document.querySelector('.header-header');
 burger.addEventListener('click',function () {  
   nav.classList.toggle('active')
+})
+
+window.addEventListener('scroll',function () {  
+  if (window.innerWidth > 992) {
+      if (window.pageYOffset > 40) {
+        header.classList.add('active')
+      } else {
+        header.classList.remove('active')
+  }
+  }
 })
