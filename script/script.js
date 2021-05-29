@@ -32,11 +32,10 @@ burger.addEventListener('click',function () {
 })
 
 window.addEventListener('scroll',function () {  
-  if (window.innerWidth > 992) {
-      if (window.pageYOffset > 40) {
-        header.classList.add('active')
-      } else {
-        header.classList.remove('active')
-  }
-  }
+    if (window.pageYOffset > 40) {
+      header.classList.add('active')
+    } else {
+      header.classList.remove('active')
+    }
+  
 })
