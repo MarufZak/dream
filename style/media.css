@@ -39,6 +39,21 @@
         align-items: center;
     }
 }
+@media (max-width:1020px) {
+    .best__body {
+        overflow-x: hidden;
+    }
+    .best__slider-slide {
+        flex: 1 0 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .best__slider-wrapper {
+        gap: 0;
+    }
+}
 @media (max-width: 992px) {
     .header-body {
         flex-direction: column;

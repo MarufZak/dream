@@ -24,6 +24,23 @@ const headerSwiper = new Swiper(".header-swiper",{
     
 })
 
+const bestSwiper = new Swiper(".best__slider",{
+    wrapperClass: "best__slider-wrapper",
+    slideClass: "best__slider-slide",
+    slideActiveClass: "best__slider-slide_active",
+    autoHeight: true,
+    observer: true,
+    observeParents: true,
+    centeredSlides: true,
+    breakpoints: {
+      1020: {
+        grabCursor: true,
+        slidesPerView: 'auto',
+        centeredSlides: false
+      },
+    }
+})
+
 const nav = document.querySelector('.header__nav');
 const burger = document.querySelector('.header__burger');
 const header = document.querySelector('.header-header');
@@ -39,3 +56,4 @@ window.addEventListener('scroll',function () {
     }
   
 })
+
