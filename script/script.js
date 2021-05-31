@@ -41,6 +41,17 @@ const bestSwiper = new Swiper(".best__slider",{
     }
 })
 
+const testSlider = new Swiper(".test__slider",{
+  wrapperClass: "test__wrapper",
+  slideClass: "test__slider-slide",
+  slideActiveClass: "test__slider-slide_active",
+  navigation: {
+    nextEl: ".test__slider-next",
+    prevEl: ".test__slider-prev",
+  },
+  grabCursor: true,
+})
+
 const nav = document.querySelector('.header__nav');
 const burger = document.querySelector('.header__burger');
 const header = document.querySelector('.header-header');
@@ -53,6 +64,10 @@ window.addEventListener('scroll',function () {
       header.classList.add('active')
     } else {
       header.classList.remove('active')
+    }
+
+    if (window.innerWidth < 992 ) {
+      testSlider.destroy()
     }
   
 })
