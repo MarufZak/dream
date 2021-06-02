@@ -1199,6 +1199,7 @@ body {
     width: 385px;
     height: 100%;
     background: var(--blueLight);
+    display: none;
 }
 
 .footer-col span ,
