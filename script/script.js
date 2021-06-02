@@ -50,6 +50,7 @@ const testSlider = new Swiper(".test__slider",{
     prevEl: ".test__slider-prev",
   },
   grabCursor: true,
+  centeredSlides: true
 })
 
 const nav = document.querySelector('.header__nav');
