@@ -608,6 +608,7 @@ body {
     position: relative;
     width: clamp(150px, 30vw, 480px);
     height: 100%;
+    padding-bottom: 44.5%;
 }
 
 .week__uptitle {
